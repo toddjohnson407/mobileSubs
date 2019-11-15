@@ -1,2 +1,3 @@
-/* @import '../node_modules/nativescript-theme-core/css/core.css'; */
-@import '~nativescript-theme-core/css/sky.css';
+@import '~nativescript-theme-core/css/core.compat.css';
+@import '~nativescript-theme-core/css/forest.compat.css';
+

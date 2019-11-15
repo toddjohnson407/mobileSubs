@@ -2,32 +2,35 @@
 <ActionBar title="Substitution Tracker" class="action-bar">
 </ActionBar>
 
-<FlexboxLayout>
+<StackLayout flexDirection="column" justifyContent="flex-end" class="page">
+  <!-- <Label class="h2 text-center m-t-30" text="New Roster"></Label> -->
   <StackLayout class="form">
 
-    <Label class="h1" text="New Game"></Label>
-    <Label [text]="'fuckmy ass'" textWrap="true"></Label>
     
 
     <StackLayout class="input-field">
-      <TextField class="input" [(ngModel)]="rosterForm.title"></TextField>
+      <!-- <Label text="Roster Name" class="label font-weight-bold m-b-5 h2 text-center m-t-30"></Label> -->
+      <TextField class="input input-border text-center font-weight-bold" hint="Roster Name" [(ngModel)]="rosterForm.title"></TextField>
+      <StackLayout class="hr-light"></StackLayout>
     </StackLayout>
-    <StackLayout class="hr-light m-10"></StackLayout>
-    <ListView [items]="rosterForm.players"  loaded="onLoaded" itemLoading="onItemLoading" class="list-group">
+    <ListView [items]="rosterForm.players" class="list-group" height="310">
       <ng-template let-player="item" let-i="index">
-        <StackLayout class="input-field">
-
-          <StackLayout class="input-field">
-            <TextField class="input" hint="Player Name" [(ngModel)]="rosterForm.players[i].name" returnKeyType="next"></TextField>
+          <StackLayout class="list-group-item">
+            <StackLayout class="input-field">
+              <!-- <StackLayout class="hr-light m-0"></StackLayout> -->
+              <TextField class="input" hint="Player Name" [(ngModel)]="rosterForm.players[i].name" returnKeyType="next"></TextField>
+            </StackLayout>
+            <!-- <StackLayout class="input-field">
+              <StackLayout class="hr-light"></StackLayout>
+              <TextField class="input" hint="Player Position" [(ngModel)]="rosterForm.players[i].position" returnKeyType="next"></TextField>
+            </StackLayout> -->
           </StackLayout>
-          <StackLayout class="input-field">
-            <TextField class="input" hint="Player Position" [(ngModel)]="rosterForm.players[i].position" returnKeyType="next"></TextField>
-          </StackLayout>
-
-        </StackLayout>
       </ng-template>
     </ListView>
 
-    <Button text="Create Roster"(tap)="createRoster()"></Button>
+    <StackLayout flexDirection="column" justifyContent="flex-end">
+      <Button text="Add Player" (tap)="addPlayer()" class="btn btn-outline"></Button>
+      <Button text="Create Roster" (tap)="createRoster()" class="btn btn-outline"></Button>
+    </StackLayout>
   </StackLayout>
-</FlexboxLayout>
+</StackLayout>

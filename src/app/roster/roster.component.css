@@ -1,11 +1,47 @@
 
-.page {
-  align-items: center;
-  flex-direction: column;
+@font-face {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("../webfonts/fa-solid-900.eot");
+  src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; }
+
+.far {
+  font-family: 'Font Awesome 5 Free', 'fa-solid-900';
+  font-weight: 900;
 }
-.form {
-  margin-left: 30;
-  margin-right: 30;
-  flex-grow: 2;
-  vertical-align: middle;
+
+.far {
+  font-family: "Font Awesome 5 Free", "fa-regular-400";
+}
+
+.fab {
+  font-family: "Font Awesome 5 Brands", "fa-brands-400";
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free", "fa-solid-900";
+}
+
+.ico {
+  font-family: "IcoMoon-Free";
+}
+/* << icon-font-css-class-def */
+.border_style{
+  border-width: 5;
+  border-color:black;
+  padding: 5;
+  margin-bottom: 2;
+}
+
+Label {
+  font-size: 48;
+  color: #66ccff;
+  margin: 8;
 }
