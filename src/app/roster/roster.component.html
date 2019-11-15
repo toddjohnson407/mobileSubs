@@ -1,0 +1,33 @@
+
+<ActionBar title="Substitution Tracker" class="action-bar">
+</ActionBar>
+
+<FlexboxLayout>
+  <StackLayout class="form">
+
+    <Label class="h1" text="New Game"></Label>
+    <Label [text]="'fuckmy ass'" textWrap="true"></Label>
+    
+
+    <StackLayout class="input-field">
+      <TextField class="input" [(ngModel)]="rosterForm.title"></TextField>
+    </StackLayout>
+    <StackLayout class="hr-light m-10"></StackLayout>
+    <ListView [items]="rosterForm.players"  loaded="onLoaded" itemLoading="onItemLoading" class="list-group">
+      <ng-template let-player="item" let-i="index">
+        <StackLayout class="input-field">
+
+          <StackLayout class="input-field">
+            <TextField class="input" hint="Player Name" [(ngModel)]="rosterForm.players[i].name" returnKeyType="next"></TextField>
+          </StackLayout>
+          <StackLayout class="input-field">
+            <TextField class="input" hint="Player Position" [(ngModel)]="rosterForm.players[i].position" returnKeyType="next"></TextField>
+          </StackLayout>
+
+        </StackLayout>
+      </ng-template>
+    </ListView>
+
+    <Button text="Create Roster"(tap)="createRoster()"></Button>
+  </StackLayout>
+</FlexboxLayout>
