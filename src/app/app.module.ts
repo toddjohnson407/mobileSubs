@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 
-import { KinveyModule } from 'kinvey-nativescript-sdk/angular';
+// import { KinveyModule } from 'kinvey-nativescript-sdk/angular';
 
 
 import { RosterComponent } from "./roster/roster.component";
@@ -19,11 +19,11 @@ import { RosterComponent } from "./roster/roster.component";
     NativeScriptModule,
     AppRoutingModule,
     NativeScriptFormsModule,
-    NativeScriptHttpClientModule,
-    KinveyModule.init({
-      appKey: 'kid_rkAS63nsS',
-      appSecret: '33df2cb32c1b45fdbde41a69b5bd16e2'
-    })
+    NativeScriptHttpClientModule
+    // KinveyModule.init({
+    //   appKey: 'kid_rkAS63nsS',
+    //   appSecret: '33df2cb32c1b45fdbde41a69b5bd16e2'
+    // })
   ],
   declarations: [
     AppComponent,

@@ -3,7 +3,7 @@ import { Roster } from "./roster";
 import { RosterService } from "./roster.service";
 import { Player } from "./player/player";
 import { FormControl } from "@angular/forms";
-import { PingService } from "kinvey-nativescript-sdk/angular";
+// import { PingService } from "kinvey-nativescript-sdk/angular";
 
 @Component({
   selector: "ns-roster",
@@ -20,7 +20,7 @@ export class RosterComponent implements OnInit {
 
   constructor(
     private RosterService: RosterService,
-    private pingService: PingService
+    // private pingService: PingService
   ) {
     this.addPlayer();
     this.rosterForm = {
@@ -33,7 +33,7 @@ export class RosterComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('rosterForm', this.rosterForm);
-    this.verify();
+    // this.verify();
   }
 
   /** Returns a new FormGroup for a new Player */
@@ -45,7 +45,7 @@ export class RosterComponent implements OnInit {
     console.log('-----------------');
     console.log(this.players);
     console.log(this.rosterForm);
-    
+
   }
 
   /** Submits new Roster data */
@@ -55,16 +55,16 @@ export class RosterComponent implements OnInit {
   }
 
   async verify() {
-    try {
-      const response = await this.pingService.ping();
-      console.log("Kinvey is up! "
-                 + "Version: " + response.version
-                 + " Response: " + response.kinvey
-      );
-    } catch (error) {
-      console.log(error);
-      console.log(`Kinvey Ping Failed. Response: ${error}`);
-    }
+    // try {
+    //   const response = await this.pingService.ping();
+    //   console.log("Kinvey is up! "
+    //              + "Version: " + response.version
+    //              + " Response: " + response.kinvey
+    //   );
+    // } catch (error) {
+    //   console.log(error);
+    //   console.log(`Kinvey Ping Failed. Response: ${error}`);
+    // }
   }
 
 }
